@@ -1,13 +1,22 @@
 import os
 import json
 import streamlit as st
+# ----------------------------- STREAMLIT INTERFACE ----------------------------- #
+# Title and description for the Streamlit app
+st.title("Multi-Agent System 🚀")
+st.markdown("### Ask me about:")
+st.markdown("""
+- General queries  
+- Math problems  
+- Fun facts  
+""")
 from langchain.agents import Tool, initialize_agent
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 import random
 
 # Set environment variables for authentication  
-os.environ["GOOGLE_API_KEY"] = "AIzaSyB-XVmQwDMFsWggv8yiNDg_an35DvWJ_-g"  # Set API key for Google's generative model authentication
+os.environ["GOOGLE_API_KEY"] = "***************************************"  # Set API key for Google's generative model authentication
 
 # Set up the underlying language model (LLM) with the Gemini model
 model = ChatGoogleGenerativeAI(model="gemini-1.5-flash-002")
@@ -89,16 +98,6 @@ conversational_agent = initialize_agent(
     early_stopping_method='generate',  # Stop early if output is generated
     memory=memory  # Use conversation memory
 )
-
-# ----------------------------- STREAMLIT INTERFACE ----------------------------- #
-# Title and description for the Streamlit app
-st.title("Multi-Agent System 🚀")
-st.markdown("### Ask me about:")
-st.markdown("""
-- General queries  
-- Math problems  
-- Fun facts  
-""")
 
 # ----------------------------- CHAT HISTORY MANAGEMENT ----------------------------- #
 # Initialize chat history in session state if not already present
