@@ -3,7 +3,7 @@
 Welcome to the AI Agents repository! This repository contains a comprehensive explanation of AI agents, their differences from traditional AI models, and hands-on Python implementations. Additionally, it includes a Streamlit UI to interact with AI agents powered by LangChain and Google Gemini.
 
 For detailed understanding you can read my blog 
-[What are AI Agents](https://medium.com/@venkiperfect/text-summarization-using-langchain-with-lmm-streamlit-python-7264ef4cebef)
+[What are AI Agents](https://medium.com/@venkiperfect/ai-agents-explained-theory-applications-and-python-implementation-5de81ce7cd92)
 
 ## 🚀 Getting Started
 
